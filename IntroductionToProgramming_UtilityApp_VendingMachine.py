@@ -7,19 +7,19 @@ import sys
 pygame.mixer.init()
 engine = pyttsx3.init()
 
-# Setup talk-to-speech feauture
+# Setup talk-to-speech feature
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)  # Use female voice
 engine.setProperty('rate', 130)  # Speech rate
 
-def typing(text, delay=0.1): #Typing effect
+def typing(text, delay=0.1): # Typing effect
     for char in text:
         sys.stdout.write(char)  # Write character without a newline
         sys.stdout.flush()  # Flush the output buffer to print the character immediately
         time.sleep(delay)  # Wait for the specified delay before printing the next character
     print()  # Print a newline at the end
 
-def play_background_music(): #Plays background music
+def play_background_music(): # Plays background music
     try:
         music_file = "C:\\Users\\MICHELLE\\Music\\BGM\\Escape from reality in Kyoto on the weekend.mp3"  # Music file
         pygame.mixer.music.load(music_file)  # Load the music
@@ -44,7 +44,7 @@ def display_items(vm_items): # Display function for the vending machine items, p
 def item_stock(vm_items, code): # Stock management
     return code in vm_items and vm_items[code]['stock'] > 0
 
-def transaction(vm_items, code, payment): # Functionn for transaction and giving change
+def transaction(vm_items, code, payment): # Function for transaction and giving change
     sel_item = vm_items[code]
     price = sel_item['price']
     if payment < price:
@@ -113,7 +113,7 @@ def main(): #Main function to run the whole program
     typing(text, delay=0.05)
 
     while True:
-        display_items(vm_items) # Call display_item function with items
+        display_items(vm_items) # Call display_items function with items
 
         speak("Please enter the code of the item you'd like to purchase or press 'Q' to exit.")
         pick = input("\n[Please enter the code of the item you'd like to purchase (e.g., A1, B1, etc.) or 'Q' to exit: ").upper() # Input for user item of choice

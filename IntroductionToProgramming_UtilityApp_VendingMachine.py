@@ -23,7 +23,7 @@ def play_background_music(): #Plays background music
     try:
         music_file = "C:\\Users\\MICHELLE\\Music\\BGM\\Escape from reality in Kyoto on the weekend.mp3"  # Music file
         pygame.mixer.music.load(music_file)  # Load the music
-        pygame.mixer.music.set_volume(0.1)
+        pygame.mixer.music.set_volume(0.05)
         pygame.mixer.music.play(-1, 0.0)  # Loop the background music
     except pygame.error as e:
         print(f"[Error loading music: {e}]")
@@ -93,16 +93,16 @@ def play_receipt_sound(): # Function to play receipt printing sound
 
 def main(): #Main function to run the whole program
     vm_items = {
-        'A1': {'item': 'Chips', 'price': 3.20, 'stock': 25},
-        'A2': {'item': 'Energy Bar', 'price': 5.00, 'stock': 25},
-        'A3': {'item': 'Chocolate Bar', 'price': 3.15, 'stock': 25},
-        'A4': {'item': 'Candy', 'price': 3.00, 'stock': 25},
-        'A5': {'item': 'Fruit Snack', 'price': 3.95, 'stock': 25},
-        'B1': {'item': 'Soda', 'price': 3.50, 'stock': 25},
+        'A1': {'item': 'Chips', 'price': 3.20, 'stock': 17},
+        'A2': {'item': 'Energy Bar', 'price': 5.00, 'stock': 24},
+        'A3': {'item': 'Chocolate Bar', 'price': 3.15, 'stock': 18},
+        'A4': {'item': 'Candy', 'price': 3.00, 'stock': 19},
+        'A5': {'item': 'Fruit Snack', 'price': 3.95, 'stock': 21},
+        'B1': {'item': 'Soda', 'price': 3.50, 'stock': 13},
         'B2': {'item': 'Water', 'price': 1.00, 'stock': 25},
-        'B3': {'item': 'Juice', 'price': 3.95, 'stock': 25},
-        'B4': {'item': 'Sports Drink', 'price': 5.00, 'stock': 25},
-        'B5': {'item': 'Sparkling Water', 'price': 3.95, 'stock': 1}
+        'B3': {'item': 'Juice', 'price': 3.95, 'stock': 22},
+        'B4': {'item': 'Sports Drink', 'price': 5.00, 'stock': 19},
+        'B5': {'item': 'Sparkling Water', 'price': 3.95, 'stock': 14}
     }
 
     transactions = []  # List to store transactions during the session

@@ -116,7 +116,7 @@ def main(): #Main function to run the whole program
         display_items(vm_items) # Call display_items function with items
 
         speak("Please enter the code of the item you'd like to purchase or press 'Q' to exit.")
-        pick = input("\n[Please enter the code of the item you'd like to purchase (e.g., A1, B1, etc.) or 'Q' to exit: ").upper() # Input for user item of choice
+        pick = input("\nPlease enter the code of the item you'd like to purchase (e.g., A1, B1, etc.) or 'Q' to exit: ").upper() # Input for user item of choice
 
         if pick == "Q":
             speak("Thank you for using the vending machine. Goodbye!")
@@ -132,7 +132,7 @@ def main(): #Main function to run the whole program
             continue
 
         sel_item = vm_items[pick] 
-        print(f"Item Selected: --- {sel_item['item']} -- Price: AED{sel_item['price']}")
+        print(f"\n[Item Selected: --- {sel_item['item']} -- Price: AED{sel_item['price']}]")
 
         payment = handle_payment()
 

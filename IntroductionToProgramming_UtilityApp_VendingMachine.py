@@ -1,3 +1,8 @@
+"""
+Introduction to Programming | Assessment 2: Utility App | Vending Machine
+******************************************
+"""
+
 import pygame
 import pyttsx3
 import time
